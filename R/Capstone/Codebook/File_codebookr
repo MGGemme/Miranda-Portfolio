@@ -1,0 +1,150 @@
+---
+title: "Codebook"
+author: "Miranda Gemme"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r new dataset mg}
+sdoh_data_2 <- sdoh_data %>%
+  select("fips_code", "weighted_population", "average_hh_size", "pct_male", "pct_native_american", "pct_asian", "pct_black", "pct_hispanic", "pct_other_race", "pct_white", "pct_single_parent", "pct_hh_other_computer", "pct_hh_internet", "pct_employed", "pct_hh_inc_99999", "pct_w_medicare", "clinical_nurse_pt", "dentist_pt", "pa_pt", "mental_health_faciliy_pt", "population_density", "days_over_90_f", "median_er_dist", "median_trauma_center_dist", "median_pediatric_icu_dist", "median_health_clinic_dist", "median_drug_alcohol_care_dist", "percent_grandparents_as_guardians")
+```
+
+```{r newdataset mg}
+chr_2 <- chr_data %>%
+  select("fips_code", "median_hh_income", "pct_poor_to_fair_health", "pct_adult_smokers", "pct_binge_drinkers", "pct_under_65_no_health_insurance", "pct_highschool_diploma", "inequality_ratio", "social_clubs_per_10k", "air_polution_metric", "water_quality", "pct_high_housing_costs", "pct_overcrowded_hh", "pct_30_min_plus_commute", "school_funding_gap", "pct_voters", "pct_home_owner", "pct_65_plus", "pct_rural_population")
+```
+
+```{r Merging}
+beta_data <- merge(sdoh_data_2, chr_2, by = "fips_code")
+beta_data <- na.omit(beta_data)
+
+beta_data <- beta_data %>%
+  mutate(response = ifelse(pct_poor_to_fair_health >= median_result, "worse", "better")) %>%
+  mutate(response = as.factor(response))
+```
+
+```{r Remove extra lists made mg}
+rm(chr_2)
+rm(sdoh_data_2)
+```
+
+
+```{r codebook 1 mg}
+beta_codebook <- beta_data %>%
+  cb_add_col_attributes(
+    fips_code, description = "State-county FIPS Code (5-digit)", source = "Both SDOH and CHR") %>%
+  cb_add_col_attributes(
+    weighted_population, description = "Total weighted population", source = "SDOH") %>%
+  cb_add_col_attributes(
+    average_hh_size, description = "Average household size", source = "SDOH") %>%
+  cb_add_col_attributes(
+    pct_male, description = "Percentage of population that is male", source = "SDOH") %>%
+  cb_add_col_attributes(
+    pct_native_american, description = "Percentage of population reporting American Indian and Alaska Native race alone", source = "SDOH") %>%
+  cb_add_col_attributes(
+    pct_asian, description = "Percentage of population reporting Asian race alone", source = "SDOH") %>%
+  cb_add_col_attributes(
+    pct_black, description = "Percentage of population reporting Black or African American ethnicity alone", source = "SDOH") %>%
+  cb_add_col_attributes(
+    pct_hispanic, description = "Percentage of population reporting Hispanic ethnicity", source = "SDOH") %>%
+  cb_add_col_attributes(
+    pct_other_race, description = "Percentage of population reporting some other ethnicity alone", source = "SDOH") %>%
+  cb_add_col_attributes(
+    pct_white, description = "Percentage of population reporting White race alone", source = "SDOH") %>%
+  cb_add_col_attributes(
+    pct_single_parent, description = "Percentage of families with children that are single-parent families", source = "SDOH") %>%
+  cb_add_col_attributes(
+    pct_hh_other_computer, description = "Percentage of households with other type of computer", source = "SDOH") %>%
+  cb_add_col_attributes(
+    pct_hh_internet, description = "Percentage of households with internet access", source = "SDOH") %>%
+  cb_add_col_attributes(
+    pct_employed, description = "Percentage of civilian labor force that is employed (ages 16 and over)", source = "SDOH") %>%
+  cb_add_col_attributes(
+    pct_hh_inc_99999, description = "Percentage of population with household income between $50,000 and $99,999", source = "SDOH") %>%
+  cb_add_col_attributes(
+    pct_w_medicare, description = "Percentage of population with Medicare", source = "SDOH") %>%
+  cb_add_col_attributes(
+    clinical_nurse_pt, description = "Total number of clinical nurse specialists with NPI per 1,000 population", source = "SDOH") %>%
+  cb_add_col_attributes(
+    dentist_pt, description = "Total number of dentists with NPI per 1,000 population", source = "SDOH") %>%
+  cb_add_col_attributes(
+    pa_pt, description = "Total number of physician assistants with NPI per 1,000 population", source = "SDOH") %>%
+  cb_add_col_attributes(
+    mental_health_faciliy_pt, description = "Total number of facilities that provide mental health services per 1,000 population", source = "SDOH") %>%
+  cb_add_col_attributes(
+    population_density, description = "Population density (County)", source = "SDOH") %>%
+  cb_add_col_attributes(
+    days_over_90_f, description = "Number of days over 90 degrees Fahrenheit", source = "SDOH") %>%
+  cb_add_col_attributes(
+    median_hh_income, description = "Estimated median household income", source = "CHR") %>%
+  cb_add_col_attributes(
+    median_er_dist, description = "Median distance in miles to the nearest emergency department, calculated using population weighted tract centroids in the county", source = "SDOH") %>%
+  cb_add_col_attributes(
+    median_trauma_center_dist, description = "Median distance in miles to the nearest designated trauma center, calculated using population weighted tract centroids in the county", source = "SDOH") %>%
+  cb_add_col_attributes(
+    median_pediatric_icu_dist, description = "Median distance in miles to the nearest pediatric ICU, calculated using population weighted tract centroids in the county", source = "SDOH") %>%
+  cb_add_col_attributes(
+    median_health_clinic_dist, description = "Median distance in miles to the nearest health clinic (FQHC, RHC), calculated using population weighted tract centroids in the county", source = "SDOH") %>%
+  cb_add_col_attributes(
+    median_drug_alcohol_care_dist, description = "Median distance in miles to the nearest hospital with alcohol and drug abuse inpatient care, calculated using population weighted tract centroids in the county", source = "SDOH") %>%
+  cb_add_col_attributes(
+    percent_grandparents_as_guardians, description = "Percentage of children living with grandparent householder whose grandparent is responsible for them: parent may or may not be present", source = "SDOH") %>%
+  cb_add_col_attributes(
+    pct_poor_to_fair_health, description = "Percentage of adults reporting fair or poor health", source = "CHR") %>%
+  cb_add_col_attributes(
+    pct_adult_smokers, description = "Percentage of adults who are current smokers", source = "CHR") %>%
+  cb_add_col_attributes(
+    pct_binge_drinkers, description = "Percentage of adults reporting binge or heavy drinking", source = "CHR") %>%
+  cb_add_col_attributes(
+    pct_under_65_no_health_insurance, description = "Percentage of population with no health insurance", source = "CHR") %>%
+  cb_add_col_attributes(
+    pct_highschool_diploma, description = "Percentage of adults ages 25 and over with a high school diploma or equivalent", source = "CHR") %>%
+  cb_add_col_attributes(
+    inequality_ratio, description = "Ratio of household income at the 80th percentile to income at the 20th percentile", source = "CHR") %>%
+  cb_add_col_attributes(
+    social_clubs_per_10k, description = "Number of membership associations per 10,000 population", source = "CHR") %>%
+  cb_add_col_attributes(
+    air_polution_metric, description = "Average daily density of fine particulate matter in micrograms per cubic meter", source = "CHR") %>%
+  cb_add_col_attributes(
+    water_quality, description = "Indicator of the presence of health-related drinking water violations. 0=No, 1=Yes", source = "CHR") %>%
+  cb_add_col_attributes(
+    pct_high_housing_costs, description = "Percentage of households with severe cost burden – monthly housing costs (including utilities) exceed 50% of monthly income", source = "CHR") %>%
+  cb_add_col_attributes(
+    pct_overcrowded_hh, description = "Percentage of households with overcrowding – more than 1 person per room", source = "CHR") %>%
+  cb_add_col_attributes(
+    pct_30_min_plus_commute, description = "Percentage of workers who commute in their car alone, the percentage that commute more than 30 minutes", source = "CHR") %>%
+  cb_add_col_attributes(
+    school_funding_gap, description = "The average gap in dollars between actual and required spending per pupil among public school districts. Required spending is an estimate of dollars needed to achieve U.S. average test scores in each district", source = "CHR") %>%
+  cb_add_col_attributes(
+    pct_voters, description = "Percentage for voter turnout", source = "CHR") %>%
+  cb_add_col_attributes(
+    pct_home_owner, description = "Percentage of owner-occupied housing units", source = "CHR") %>%
+  cb_add_col_attributes(
+    pct_65_plus, description = "Percentage of 65 and Older raw value", source = "CHR") %>%
+  cb_add_col_attributes(
+    pct_rural_population, description = "Percentage Rural raw value", source = "CHR") %>%
+  cb_add_col_attributes(
+    response, description = "Response variable, percentage of adults reporting fair or poor health", source = "Calculated as Better or Worse")
+
+```
+
+```{r printing codebook}
+
+print(x = codebook(beta_codebook, 
+                   title = "Social Determinants of Health Impact on Quality of Life in US Counties Codebook",
+  subtitle = "By: Steven Uzupis, Udumaga Onyeukwu, and Miranda Gemme",
+  description = "Team Beta capstone project for Merrimack College, Masters in Data Science Program, focusing on using Social Determinants of Health to predict quality of life in US Counties.
+
+Research Question: How do social determinants of life affect the quality of life in different localities?
+
+Hypothesis: Social determinants of health, such as economic stability, social connectedness, access to healthcare, and neighborhood environment, significantly predict self-reported health status in US counties.
+
+Prediction: US counties with higher economic security, stronger social support infrastructure, better access to healthcare services, and safer, more accessible neighborhoods will report better overall health status than counties lacking these social determinants.
+
+The predictor variables are obtained from the Social Determinants of Health (SDOH) Database provided by the Agency for Healthcare Research and Quality (AHRQ). The response variable represents 'the percentage of adults reporting fair or poor health.'
+
+To test the research question or hypothesis, the statistical software R is being used."
+), target = "beta_codebook_v1.docx")
+```
+
