@@ -2,7 +2,7 @@
 title: "Codebook"
 author: "Miranda Gemme-Ellis"
 date: "`r Sys.Date()`"
-output: html_document
+output: word_document
 ---
 
 ```{r library}
