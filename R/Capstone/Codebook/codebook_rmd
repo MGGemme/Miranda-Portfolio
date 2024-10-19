@@ -5,6 +5,13 @@ date: "`r Sys.Date()`"
 output: html_document
 ---
 
+```{r library}
+library(codebookr)
+library(dplyr)
+```
+
+### Dataset below was from project
+
 ```{r new dataset mg}
 sdoh_data_2 <- sdoh_data %>%
   select(
