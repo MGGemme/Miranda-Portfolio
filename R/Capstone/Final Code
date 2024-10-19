@@ -1,6 +1,6 @@
 ---
 title: "Team Beta Capstone Project"
-author: "Mirande Gemme, Udumaga Onyeukwu, Steve Uzupis"
+author: "Miranda Gemme, Udumaga Onyeukwu, Steve Uzupis"
 date: "`r Sys.Date()`"
 output: word_document
 ---
