@@ -1,0 +1,58 @@
+---
+title: "Video Game Sales Codebook"
+author: "Miranda Gemme-Ellis"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+
+```{r reading csv}
+setwd("~/Desktop")
+vgsales <- read.csv("vgsales.csv")
+```
+
+
+```{r library}
+library(codebookr)
+library(dplyr)
+```
+
+
+
+```{r}
+vg_codebook <- vgsales %>%
+  cb_add_col_attributes(
+    Rank, description = "Ranking of overall sales", source = "Video Game Sales") %>%
+  cb_add_col_attributes(
+    Name, description = "The video games name", source = "Video Game Sales") %>%
+  cb_add_col_attributes(
+    Platform, description = "Platform of the video games release (i.e. PC,PS4, etc.)", source = "Video Game Sales") %>%
+  cb_add_col_attributes(
+    Year, description = "Year of video game's release", source = "Video Game Sales") %>%
+  cb_add_col_attributes(
+    Genre, description = "Genre of video game", source = "Video Game Sales") %>%
+  cb_add_col_attributes(
+    Publisher, description = "Publisher of video game", source = "Video Game Sales") %>%
+  cb_add_col_attributes(
+    NA_Sales, description = "Sales in North America (millions)", source = "Video Game Sales") %>%
+  cb_add_col_attributes(
+    EU_Sales, description = "Sales in Europe (millions)", source = "Video Game Sales") %>%
+  cb_add_col_attributes(
+    JP_Sales, description = "Sales in Japan (millions)", source = "Video Game Sales") %>%
+  cb_add_col_attributes(
+    Other_Sales, description = "Sales in the rest of the world (millions)", source = "Video Game Sales") %>%
+  cb_add_col_attributes(
+    Global_Sales, description = "Total worldwide sales", source = "Video Game Sales")
+```
+
+
+
+
+```{r printing codebook}
+
+print(x = codebook(vg_codebook, 
+                   title = "Video Game Sales Analysis Codebook",
+  subtitle = "By: Miranda Gemme-Ellis",
+  description = "The objective of this project is to analyze video game sales worldwide, focusing on factors such as genre, game ranking, publisher, platform, and regional sales (including North America, Japan, and other regions). The goal is to analyze gaming industry trends, assess video games' performance across different localities, and understand the influence of different platforms and publishers on sales. Analyzing this data can help stakeholders, such as publishers and developers, to strategize marketing more effectively."
+), target = "vgCodebook_v1.docx")
+```
+
