@@ -1,6 +1,6 @@
-remote_theme: pages-themes/minimal@v0.2.0
-plugins:
-- jekyll-remote-theme
-gem "github-pages", group: :jekyll_plugins
-
 title: Miranda Gemme-Ellis
+#logo: /assets/img/headshot_circle.png
+#description: text below image... Recent graduate from Merrimack College Master's Program
+#show_downloads: true
+theme: jekyll-theme-minimal
+
