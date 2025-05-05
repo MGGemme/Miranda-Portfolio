@@ -53,7 +53,7 @@ Problem Solving, Critical Thinking, Communication, Collaboration, Attention to D
 
 ---
 
-## 📊 Projects
+## Projects
 
 ### Sentiment Analysis Using Python  
 - Used NetworkX to analyze social media connections  
