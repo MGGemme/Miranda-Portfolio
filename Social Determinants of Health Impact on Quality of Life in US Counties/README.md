@@ -1,4 +1,6 @@
-Team Beta capstone project for Merrimack College, Master's in Data Science Program, focusing on using social Determinants of Health to predict quality of life in US Counties.
+## Team Beta capstone project for Merrimack College, Master's in Data Science Program, focusing on using social Determinants of Health to predict quality of life in US Counties.
+
+
 
 ## Research question: 
 
