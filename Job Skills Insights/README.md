@@ -11,7 +11,7 @@ This is a Python project that scrapes job listings from the web, stores them in 
 
 ## Tools & Technologies
 
-- **Python**
+- **Python / Google Colab**
 - **SQLite**
 - **BeautifulSoup** for scraping
 
