@@ -2,3 +2,12 @@ import requests
 from bs4 import BeautifulSoup
 import sqlite3
 import time
+
+
+# create folder
+os.makedirs('database', exist_ok=True)
+
+# connect to sqlite3
+conn = sqlite3.connect('database/jobs.db')
+cursor = conn.cursor()
+
