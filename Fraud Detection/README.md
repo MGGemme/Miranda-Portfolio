@@ -6,5 +6,5 @@ For this project, both datasets were combined into a single dataset to:
 - Conduct comprehensive exploratory data analysis (EDA) across the full dataset to identify trends, outliers, and fraud-related patterns that may otherwise be missed in a smaller sample.
 
 ####### Data Source: 
-The dataset used in this project was downloaded from Kaggle – Fraud Detection Dataset.
+The dataset used in this project was downloaded from [Kaggle – Fraud Detection Dataset](https://www.kaggle.com/datasets/ealaxi/paysim1).
 Due to file size limitations, the raw CSV files (fraudTrain.csv and fraudTest.csv) are not included in this repository.
