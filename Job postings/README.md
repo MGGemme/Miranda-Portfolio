@@ -9,5 +9,5 @@ Scrape the web and analyze machine learning, data science, and analytics job pos
 
   
 ### Tools:
-Python (Jupyter Notebook)
+Python (Jupyter Notebook / Google Colab)
 - BeautifulSoup
