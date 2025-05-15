@@ -6,3 +6,8 @@ Scrape the web and analyze machine learning, data science, and analytics job pos
 - Trends in job titles, locations, and experience requirements
 
 - Actionable recommendations for what to include on your resume
+
+  
+### Tools:
+Python (Jupyter Notebook)
+- BeautifulSoup
