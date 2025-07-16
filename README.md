@@ -1,7 +1,7 @@
 # Miranda Gemme-Ellis  
-📍 Belchertown, MA  
-📞 (413) 687-1032  
-📧 mirandaggemme@gmail.com  
+Belchertown, MA  
+(413) 687-1032  
+mirandaggemme@gmail.com  
 🔗 [LinkedIn](https://www.linkedin.com/in/miranda-gemme)
 
 ## Education
