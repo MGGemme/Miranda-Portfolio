@@ -23,7 +23,7 @@ Relevant Courses: Biostatistics, Epidemiology, Data Visualization, Chronic Disea
 ## Technical Skills
 
 **Programming & Tools:**  
-Python, R, SQL, NumPy, pandas, TensorFlow, scikit-learn, Tableau, Stata, Jupyter Notebook, GitHub, Qualtrics, Salesforce, Nikon Elements
+Python, R, SQL, NumPy, pandas, TensorFlow, SQL, Excel, scikit-learn, Tableau, Stata, Jupyter Notebook, GitHub, Qualtrics, Salesforce, Nikon Elements
 
 **Data Skills:**  
 Data Cleaning & Wrangling, Machine Learning, Predictive Modeling, Statistical Analysis, A/B Testing, Data Visualization, Survey Design
