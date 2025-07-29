@@ -74,3 +74,12 @@ Problem Solving, Critical Thinking, Communication, Collaboration, Attention to D
 
 ## Let's Connect  
 Feel free to reach out via [LinkedIn](https://www.linkedin.com/in/miranda-gemme) or email at mirandaggemme@gmail.com!
+
+---
+
+## Availability
+
+- Open to full-time roles (remote, hybrid, or relocation)
+- Willing to relocate to Florida, Georgia, South Carolina, or North Carolina
+- Comfortable working independently or within cross-functional teams
+
