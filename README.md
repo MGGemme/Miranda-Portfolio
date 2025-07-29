@@ -2,7 +2,7 @@
 Belchertown, MA  
 (413) 687-1032  
 mirandaggemme@gmail.com  
-🔗 [LinkedIn](https://www.linkedin.com/in/miranda-gemme)
+[LinkedIn](https://www.linkedin.com/in/miranda-gemme)
 
 ## Education
 
@@ -55,10 +55,6 @@ Problem Solving, Critical Thinking, Communication, Collaboration, Attention to D
 
 ## Projects
 
-### Sentiment Analysis Using Python  
-- Used NetworkX to analyze social media connections  
-- Calculated centrality metrics to identify key influencers
-
 ### Social Determinants of Health & Quality of Life (Capstone)  
 - Merged AHRQ & CHR data for 3,000+ US counties  
 - Built GBM model with R to predict health outcomes  
@@ -69,8 +65,10 @@ Problem Solving, Critical Thinking, Communication, Collaboration, Attention to D
 - Achieved AUC of 0.87 and applied L2 regularization & dropout layers
 
 ### Predicting Medical Expenses & Smoking Likelihood  
-- Applied Ridge, Lasso, and GBM in R  
-- Engineered features and reduced prediction error by 12%
+- Built predictive models in R to estimate individual medical costs and likelihood of smoking using demographic and health data.  
+- Applied Ridge, Lasso, and Gradient Boosting (GBM) to optimize performance and interpret key drivers of cost and behavior.  
+- Engineered features and reduced prediction error by 12% across test sets.
+
 
 ---
 
