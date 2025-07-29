@@ -10,7 +10,7 @@ Hi! I’m Miranda, a data scientist with a background in public health, pharmacy
 
 Most of my work is done in R and Python, but I also use SQL, Tableau, and any other tools required by the project. I especially like projects related to healthcare, operations, or anything that helps people make better decisions.
 
-I’m based in Massachusetts but open to remote work or relocating to Florida, South Carolina, or North Carolina. I’m also comfortable working solo or collaborating across teams.
+I’m based in Massachusetts but open to remote work or relocating to Florida, South Carolina, or North Carolina. I’m also comfortable collaborating with teams or working by myself.
 
 Thanks for checking out my work!
 
