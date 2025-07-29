@@ -1,8 +1,20 @@
 # Miranda Gemme-Ellis  
-Belchertown, MA  
+Massachusetts  
 (413) 687-1032  
 mirandaggemme@gmail.com  
 [LinkedIn](https://www.linkedin.com/in/miranda-gemme)
+
+## About Me
+
+Hi! I’m Miranda, a data scientist with a background in public health, pharmacy operations, and applied machine learning. I enjoy working on real-world problems where I can use data to make things more efficient, understandable, or better.
+
+Most of my work is in R and Python, but I also use SQL, Tableau, and whatever tools the project calls for. I especially like projects related to healthcare, operations, or anything that helps people make better decisions.
+
+I’m based in Massachusetts but open to remote work or relocating to Florida, South Carolina, or North Carolina. I’m also comfortable working solo or collaborating across teams.
+
+Thanks for checking out my work!
+
+--- 
 
 ## Education
 
