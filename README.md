@@ -6,7 +6,7 @@ mirandaggemme@gmail.com
 
 ## About Me
 
-Hi! I’m Miranda and I have a background in public health, pharmacy, and applied machine learning. I enjoy working on real-world problems where I can use data to make things more efficient and understandable.
+Hi! I’m Miranda and I have a background in public health, pharmacy, and machine learning. I enjoy working on real-world problems where I can use data to make things more efficient and understandable.
 
 Most of my work is done in R and Python, but I also use SQL, Tableau, and any other tools required by the project. I’m a quick learner and always open to learning new skills or technologies when the project calls for it.
 
