@@ -34,14 +34,13 @@ Relevant Courses: Biostatistics, Epidemiology, Data Visualization, Chronic Disea
 
 ## Technical Skills
 
-**Programming & Tools:**  
-Python, R, SQL, NumPy, pandas, TensorFlow, SQL, Excel, scikit-learn, Tableau, Stata, Jupyter Notebook, GitHub, Qualtrics, Salesforce, Nikon Elements
+Programming & Tools: Python, R, SQL, Excel, PowerPoint, Jupyter Notebook, GitHub, Tableau, TensorFlow, Stata, Salesforce, Qualtrics
 
-**Data Skills:**  
-Data Cleaning & Wrangling, Machine Learning, Predictive Modeling, Statistical Analysis, A/B Testing, Data Visualization, Survey Design
+Data Science & Analytics: Data Cleaning, Feature Engineering, Predictive Modeling, Machine Learning, Data Mining, Statistical Analysis, A/B Testing
 
-**Soft Skills:**  
-Problem Solving, Critical Thinking, Communication, Collaboration, Attention to Detail
+Cloud & Platforms: AWS (Cloud Practitioner – in progress), Google Data Analytics – in progress, GitHub
+
+Core Competencies: Critical Thinking, Stakeholder Communication, Technical Writing, Time Management, Problem Solving, Adaptability
 
 ---
 
